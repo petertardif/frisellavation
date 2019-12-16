@@ -4,7 +4,8 @@ import { View } from 'react-native';
 
 export default function SettingsScreen() {
 
-  return <View></View> ;
+  return <View>
+        </View> 
 }
 
 SettingsScreen.navigationOptions = {
