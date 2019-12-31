@@ -4,7 +4,6 @@ import * as Font from 'expo-font';
 import React, { useState } from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
-
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import AppNavigator from './navigation/AppNavigator';

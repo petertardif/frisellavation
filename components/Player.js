@@ -21,7 +21,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 getRandomQuote = () => {
   const randomNumForQuote = Math.floor(Math.random() * 14);
   const randomQuote = `https://res.cloudinary.com/tooltimeshare/video/upload/FrisellaVation/${randomNumForQuote}.mp3`;
-  
+
   // const quote = new PlaylistItem(
   //   randomNumForQuote,
   //   randomQuote,
