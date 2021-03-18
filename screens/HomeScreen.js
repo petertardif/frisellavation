@@ -2,20 +2,16 @@ import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 import { Audio } from 'expo-av';
 import {
-  Alert,
-  Button,
-  Image,
   ImageBackground,
   Platform,
   ScrollView,
   StyleSheet,
-  Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
 // import MotivateButton from '../components/MotivateButton';
 import Player from '../components/Player'
 import { MonoText } from '../components/StyledText';
+
 
 export default function HomeScreen() {
   return (

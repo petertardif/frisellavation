@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Button, StyleSheet, Text, View } from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default function ListToDo75Hard() {
   const [items, setItems] = useState([
@@ -21,29 +23,27 @@ export default function ListToDo75Hard() {
 
   return (
     <>
-      <header>
-        <h1>Daily 75 Hard List</h1>
-      </header>
-      <main>
-        <section>
-          <ul>
-            {items.map(item => (
-              <li>
-                <h2
-                  style={{
-                    textDecoration: item.checked ? "line-through" : null
-                  }}
-                >
-                  {item.name}
-                </h2>
-                <button onClick={() => handleCompletedItem(item)} type="button">
-                  Completed
-                </button>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </main>
+      <Text>Daily 75 Hard List</Text>
+        <View>
+          {items.map((item, i) => (
+            <ScrollView key={i}>
+              <Text
+                style={ item.checked ? styles.crossout : null }
+              >
+                {item.name}
+              </Text>
+              <Button title='Complete' onClick={() => handleCompletedItem(item)} type='button'>
+                Completed
+              </Button>
+            </ScrollView>
+          ))}
+        </View>
     </>
   )
 }
+
+const styles = StyleSheet.create({
+  crossout: {
+    textDecorationLine: 'line-through',
+  }
+})
